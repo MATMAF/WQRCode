@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generated</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            background-color: #161616;
+            color: #ffffff;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        #qr_code {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generated</h1>
+    <div id="qr_code">
+        <img src="{{ url_for('static', filename='qr_code.png') }}" alt="Generated QR Code">
+        <p>Scan the QR code or right-click to save it.</p>
+    </div>
+</body>
+</html>
